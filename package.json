@@ -1,0 +1,24 @@
+{
+  "name": "testrailtestingjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@wdio/cli": "^7.16.14",
+    "uuid": "^8.3.0"
+  },
+  "devDependencies": {
+    "@wdio/allure-reporter": "^7.16.14",
+    "@wdio/local-runner": "^7.16.14",
+    "@wdio/mocha-framework": "^7.16.14",
+    "@wdio/spec-reporter": "^7.16.14",
+    "chromedriver": "^97.0.4",
+    "wdio-chromedriver-service": "^7.2.6"
+  }
+}
