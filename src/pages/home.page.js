@@ -1,11 +1,19 @@
-class HomePage {
-    get spanText() {
-        return $('.navigation-username');
-    }
-
-    get hrefLogOut() {
-        return $('#navigation-user-logout');
-    }
+export const HOMEPAGE_SELECTOR = {
+    USERNAME: '.navigation-username',
+    LOGOUT: '#navigation-user-logout'
 }
 
-module.exports = new HomePage();
+async function profile() {
+    await $(HOMEPAGE_SELECTOR.USERNAME).click();
+}
+
+async function logout() {
+    await $(HOMEPAGE_SELECTOR.LOGOUT).click();
+}
+
+const HomePage = {
+    profile,
+    logout
+}
+
+export default HomePage;

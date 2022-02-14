@@ -1,11 +1,12 @@
-const BaseStep = require('./base.step');
-const HomePage = require('../pages/home.page');
+import HomePage from "../pages/home.page";
 
-class LogoutStep extends BaseStep {
-    async logout() {
-        await HomePage.spanText.click();
-        await HomePage.hrefLogOut.click();
-    }
+async function Logout() {
+    await HomePage.profile();
+    await HomePage.logout();
 }
 
-module.exports = new LogoutStep();
+const LogoutStep = {
+    Logout
+};
+
+export default LogoutStep;

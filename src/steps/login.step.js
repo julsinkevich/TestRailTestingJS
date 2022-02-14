@@ -1,16 +1,15 @@
-const BaseStep = require('./base.step');
-const LoginPage = require('../pages/login.page');
+import BaseStep from "./base.step";
+import LoginPage from "../pages/login.page";
 
-class LoginStep extends BaseStep {
-    async login(username, password) {
-        await LoginPage.inputUsername.setValue(username);
-        await LoginPage.inputPassword.setValue(password);
-        await LoginPage.btnSubmit.click();
-    }
-
-    open() {
-        return super.open('login');
-    }
+async function Login(email, password) {
+    await BaseStep.Open();
+    await LoginPage.enterEmail(email);
+    await LoginPage.enterPassword(password);
+    await LoginPage.clickLogin();
 }
 
-module.exports = new LoginStep();
+const LoginStep = {
+    Login
+};
+
+export default LoginStep;

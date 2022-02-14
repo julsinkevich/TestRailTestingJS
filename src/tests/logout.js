@@ -1,16 +1,14 @@
-const { config } = require('../../wdio.conf');
+import { config } from "../../wdio.conf";
 const { settings } = require('../appsettings');
-const LoginStep = require('../steps/login.step');
-const LogoutStep = require('../steps/logout.step');
+import LogoutStep from "../steps/logout.step";
+import LoginStep from "../steps/login.step";
 
-const {userData: {email, password}} = settings;
+const { userData: { email, password } } = settings;
 
 describe('My Logout application', () => {
     it('should be successful', async () => {
-        await LoginStep.open();
-        await LoginStep.login(email, password);
-
-        await LogoutStep.logout();
+        await LoginStep.Login(email, password);
+        await LogoutStep.Logout();
 
         await expect(browser).toHaveUrlContaining(`${config.baseUrl}index.php?/auth/login`);
         await expect(browser).toHaveTitle('Login - TestRail');

@@ -1,7 +1,11 @@
-const { config } = require("../../wdio.conf")
+import { config } from "../../wdio.conf";
 
-module.exports = class BaseStep {
-    open() {
-        return browser.url(config.baseUrl);
-    }
+async function Open() {
+    return browser.url(config.baseUrl);
 }
+
+const BaseStep = {
+    Open
+}
+
+export default BaseStep;
