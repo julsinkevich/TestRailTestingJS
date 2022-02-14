@@ -1,14 +1,16 @@
-const { config } = require("../../wdio.conf")
+const { settings } = require('../appsettings');
 const LoginStep = require('../steps/login.step');
 const HomePage = require('../pages/home.page');
+
+const {userData: {email, password, fullName}} = settings;
 
 describe('My Login application', () => {
     it('should login with valid credentials', async () => {
         await LoginStep.open();
 
-        await LoginStep.login(config.userData.email, config.userData.password);
+        await LoginStep.login(email, password);
 
-        await expect(HomePage.spanText).toHaveTextContaining(config.userData.fullName);
+        await expect(HomePage.spanText).toHaveTextContaining(fullName);
         await expect(browser).toHaveUrlContaining('dashboard');
     });
 });

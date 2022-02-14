@@ -20,12 +20,6 @@ exports.config = {
 
     baseUrl: 'https://jstest1.testrail.io/',
 
-    userData: {
-        fullName: 'Js Sj',
-        email: 'numud@mailto.plus',
-        password: 'ZTqjCTtGTBNfpquwIRrj'
-    },
-
     waitforTimeout: 10000,
 
     connectionRetryTimeout: 120000,
