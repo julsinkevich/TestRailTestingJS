@@ -1,12 +1,12 @@
-import HomePage from "../pages/home.page";
+import HomePage from "../pages/homePage";
 
-async function Logout() {
+async function logout() {
     await HomePage.profile();
     await HomePage.logout();
 }
 
 const LogoutStep = {
-    Logout
+    Logout: logout
 };
 
 export default LogoutStep;

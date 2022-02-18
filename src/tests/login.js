@@ -1,15 +1,15 @@
-const { settings } = require('../appsettings');
-import {HOMEPAGE_SELECTOR}  from "../pages/home.page";
-import LoginStep from "../steps/login.step";
+import {SETTINGS} from "../appsettings";
+import {HOMEPAGE_SELECTOR} from "../pages/homePage";
+import LoginStep from "../steps/loginStep";
 
-const {userData: {email, password, fullName}} = settings;
+const {USER_DATA: {EMAIL, PASSWORD, FULL_NAME}} = SETTINGS;
+const USER = {email: EMAIL, password: PASSWORD};
 
 describe('My Login application', () => {
     it('should login with valid credentials', async () => {
+        await LoginStep.Login(USER);
 
-        await LoginStep.Login(email,password);
-
-        await expect($(HOMEPAGE_SELECTOR.USERNAME)).toHaveTextContaining(fullName);
+        await expect($(HOMEPAGE_SELECTOR.USERNAME)).toHaveTextContaining(FULL_NAME);
         await expect(browser).toHaveUrlContaining('dashboard');
     });
 });

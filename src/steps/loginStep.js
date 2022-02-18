@@ -1,7 +1,7 @@
-import BaseStep from "./base.step";
-import LoginPage from "../pages/login.page";
+import BaseStep from "./baseStep";
+import LoginPage from "../pages/loginPage";
 
-async function Login(email, password) {
+async function login({email, password}) {
     await BaseStep.Open();
     await LoginPage.enterEmail(email);
     await LoginPage.enterPassword(password);
@@ -9,7 +9,7 @@ async function Login(email, password) {
 }
 
 const LoginStep = {
-    Login
+    Login: login
 };
 
 export default LoginStep;

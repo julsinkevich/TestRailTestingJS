@@ -18,11 +18,9 @@ exports.config = {
 
     bail: 0,
 
-    baseUrl: 'https://jstest1.testrail.io/',
+    waitForTimeout: 10*1000,
 
-    waitforTimeout: 10000,
-
-    connectionRetryTimeout: 120000,
+    connectionRetryTimeout: 12*10*1000,
 
     connectionRetryCount: 3,
 
