@@ -1,6 +1,7 @@
 exports.config = {
     specs: [
-        './src/tests/**/*.js'
+        './src/tests/**/*.js',
+        './src/api/tests/**/*.js'
     ],
     exclude: [
         // 'path/to/excluded/files'
@@ -32,7 +33,7 @@ exports.config = {
 
     mochaOpts: {
         ui: 'bdd',
-        timeout: 60000,
+        timeout: 6*10*1000,
         require: ['@babel/register'],
         grep: 'only'
     },
