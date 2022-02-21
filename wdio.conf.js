@@ -33,7 +33,8 @@ exports.config = {
     mochaOpts: {
         ui: 'bdd',
         timeout: 60000,
-        require: ['@babel/register']
+        require: ['@babel/register'],
+        grep: 'only'
     },
 
     afterTest: async function (test, context, { error, result, duration, passed, retries }) {
