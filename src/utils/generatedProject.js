@@ -1,8 +1,8 @@
-const {faker} = require("@faker-js/faker");
+import { faker } from "@faker-js/faker";
 
-let getGeneratedProject = () => ({
-    generatedName: faker.company.companyName(),
-    generatedAnnouncement: faker.lorem.paragraph()
-})
+const getGeneratedProject = () => ({
+  generatedName: faker.company.companyName(),
+  generatedAnnouncement: faker.lorem.paragraph(),
+});
 
 export default getGeneratedProject();

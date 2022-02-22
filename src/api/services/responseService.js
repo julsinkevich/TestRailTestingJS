@@ -1,8 +1,6 @@
 function hasStatusCode(statusCode, expectedStatusCode) {
-    if (statusCode !== expectedStatusCode)
-        throw new Error(
-            `Expected ${expectedStatusCode}, but found ${statusCode}.`
-        );
+  if (statusCode !== expectedStatusCode)
+    throw new Error(`Expected ${expectedStatusCode}, but found ${statusCode}.`);
 }
 
-export {hasStatusCode};
+export { hasStatusCode };

@@ -1,16 +1,16 @@
 import axios from "axios";
 
 export default function restClient(url) {
-    async function postRequest(body, {email, password}) {
-        return await axios.post(url, body, {
-            auth: {
-                username: email,
-                password: password
-            }
-        })
-    };
+  function postRequest(body, { email, password }) {
+    return axios.post(url, body, {
+      auth: {
+        password,
+        username: email,
+      },
+    });
+  }
 
-    return {
-        postRequest
-    };
+  return {
+    postRequest,
+  };
 }

@@ -3,11 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts":
-    {
-      "test": "mocha",
-      "test": "npx wdio run wdio.conf.js"
-    },
+  "scripts": {
+    "test": "npx wdio run wdio.conf.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -33,6 +31,7 @@
     "@wdio/mocha-framework": "7.16.15",
     "@wdio/spec-reporter": "7.16.14",
     "chromedriver": "97.0.4",
+    "prettier": "2.5.1",
     "ts-node": "10.5.0",
     "typescript": "4.5.5",
     "wdio-chromedriver-service": "7.2.6"
