@@ -1,11 +1,11 @@
-import {SETTINGS} from "../appsettings";
+import SETTINGS from "src/appsettings";
 
 async function open() {
-    return browser.url(SETTINGS.URL);
+  return browser.url(SETTINGS.URL);
 }
 
 const BaseStep = {
-    Open: open
-}
+  Open: open,
+};
 
 export default BaseStep;

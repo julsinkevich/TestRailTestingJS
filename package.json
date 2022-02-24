@@ -10,15 +10,20 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@faker-js/faker": "6.0.0-alpha.6",
+    "axios": "0.26.0",
     "babel-plugin-module-resolver": "4.1.0",
+    "chai": "4.3.6",
+    "chai-http": "4.3.0",
+    "mocha": "9.2.1",
     "read-appsettings-json": "1.0.98",
     "uuid": "8.3.0"
   },
   "devDependencies": {
     "@babel/cli": "7.17.0",
     "@babel/core": "7.17.2",
-    "@babel/preset-env": "7.16.11",
     "@babel/eslint-parser": "7.17.0",
+    "@babel/preset-env": "7.16.11",
     "@babel/register": "7.17.0",
     "@wdio/allure-reporter": "7.16.14",
     "@wdio/cli": "7.16.15",
@@ -26,6 +31,7 @@
     "@wdio/mocha-framework": "7.16.15",
     "@wdio/spec-reporter": "7.16.14",
     "chromedriver": "97.0.4",
+    "prettier": "2.5.1",
     "ts-node": "10.5.0",
     "typescript": "4.5.5",
     "wdio-chromedriver-service": "7.2.6"
