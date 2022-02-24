@@ -1,4 +1,4 @@
-import HomePage from "../pages/homePage";
+import HomePage from "src/pages/homePage";
 
 async function logout() {
   await HomePage.profile();

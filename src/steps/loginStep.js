@@ -1,5 +1,5 @@
-import BaseStep from "./baseStep";
-import LoginPage from "../pages/loginPage";
+import BaseStep from "src/steps/baseStep";
+import LoginPage from "src/pages/loginPage";
 
 async function login({ email, password }) {
   await BaseStep.Open();

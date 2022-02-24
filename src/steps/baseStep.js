@@ -1,4 +1,4 @@
-import { SETTINGS } from "../appsettings";
+import SETTINGS from "src/appsettings";
 
 async function open() {
   return browser.url(SETTINGS.URL);

@@ -1,6 +1,6 @@
-import { SETTINGS } from "../../appsettings";
-import LogoutStep from "../../steps/logoutStep";
-import LoginStep from "../../steps/loginStep";
+import { SETTINGS } from "src/appsettings";
+import LoginStep from "src/steps/loginStep";
+import LogoutStep from "src/steps/logoutStep";
 
 const {
   USER_DATA: { EMAIL, PASSWORD },

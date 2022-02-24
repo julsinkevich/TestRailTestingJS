@@ -1,9 +1,9 @@
-import getGeneratedProject from "../../utils/generatedProject";
-import SETTINGS from "../../appsettings";
-import { ADD_PROJECT_URI } from "../../api/constants/endpoints";
-import restClient from "../../api/clients/restClient";
-import { hasStatusCode } from "../../api/services/responseService";
-import HTTP_STATUS_CODES from "../../api/constants/httpStatusCodes";
+import SETTINGS from "src/appsettings";
+import restClient from "src/api/clients/restClient";
+import { ADD_PROJECT_URI } from "src/api/constants/endpoints";
+import HTTP_STATUS_CODES from "src/api/constants/httpStatusCodes";
+import { hasStatusCode } from "src/api/services/responseService";
+import getGeneratedProject from "src/utils/generatedProject";
 
 const {
   USER_DATA: { EMAIL, PASSWORD },

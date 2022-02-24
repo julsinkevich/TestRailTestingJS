@@ -1,6 +1,6 @@
-import { SETTINGS } from "../../appsettings";
-import { HOMEPAGE_SELECTOR } from "../../pages/homePage";
-import LoginStep from "../../steps/loginStep";
+import { SETTINGS } from "src/appsettings";
+import { HOMEPAGE_SELECTOR } from "src/pages/homePage";
+import LoginStep from "src/steps/loginStep";
 
 const {
   USER_DATA: { EMAIL, PASSWORD, FULL_NAME },
